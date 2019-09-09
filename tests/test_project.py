@@ -3,7 +3,7 @@ import pytest
 import markers
 import settings
 from api import osf_api
-from pages.project import ProjectPage, RequestAccessPage, AnalyticsPage, ForksPage
+from pages.project import ProjectPage, RequestAccessPage, AnalyticsPage, ForksPage, RegistrationsPage
 from pages.login import LoginPage, login, logout
 
 @pytest.fixture()
@@ -122,6 +122,7 @@ class TestAnalyticsPage:
         analytics_page = AnalyticsPage(default_project.id)
         assert analytics_page.private_project_message.present()
         assert analytics_page.disabled_chart.present()
+
 
 class TestRegistrationsPage:
 

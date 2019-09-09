@@ -57,12 +57,12 @@ class AnalyticsPage(GuidBasePage):
     private_project_message = Locator(By.CSS_SELECTOR, '._PrivateProject_1mhar6')
     disabled_chart = Locator(By.CSS_SELECTOR, '._Chart_1hff7g _Blurred_1hff7g')
 
+
 class RegistrationsPage(GuidBasePage):
     base_url = settings.OSF_HOME + '/{guid}/registrations/'
 
     identity = Locator(By.CSS_SELECTOR, '._RegistrationsContainer_ojvago')
     new_registration_button = Locator(By.CSS_SELECTOR, '[data-test-new-registration-button]')
-
 
 
 class ForksPage(GuidBasePage):

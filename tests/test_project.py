@@ -122,3 +122,10 @@ class TestAnalyticsPage:
         analytics_page = AnalyticsPage(default_project.id)
         assert analytics_page.private_project_message.present()
         assert analytics_page.disabled_chart.present()
+
+class TestRegistrationsPage:
+
+    @markers.core_functionality
+    def private_project(self, default_project):
+        registrations_page = RegistrationsPage(default_project.id)
+        assert registrations_page.new_registration_button.present()

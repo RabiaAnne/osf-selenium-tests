@@ -60,7 +60,10 @@ class AnalyticsPage(GuidBasePage):
 class RegistrationsPage(GuidBasePage):
     base_url = settings.OSF_HOME + '/{guid}/registrations/'
 
-    identity = Locator(By.CSS_SELECTOR, '[data-test-new-registration-button]')
+    identity = Locator(By.CSS_SELECTOR, '._RegistrationsContainer_ojvago')
+    new_registration_button = Locator(By.CSS_SELECTOR, '[data-test-new-registration-button]')
+
+
 
 class ForksPage(GuidBasePage):
     base_url = settings.OSF_HOME + '/{guid}/forks/'
